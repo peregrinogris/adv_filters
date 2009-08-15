@@ -4,21 +4,21 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>netlistener@firebug.com</em:id>
+    <em:id>advfilters@pererginogris.com.ar</em:id>
     <em:version>0.1</em:version>
 
     <!-- Firefox -->
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>1.5</em:minVersion>
+        <em:minVersion>3.0</em:minVersion>
         <em:maxVersion>3.6.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
-    <em:name>Net Listener</em:name>
-    <em:description>Example implementation of a Net panel listener.</em:description>
-    <em:creator>Jan Odvarko</em:creator>
-    <em:homepageURL>http://www.firebug.com</em:homepageURL>
+    <em:name>Advanced Filters</em:name>
+    <em:description>Advanced Filters for Firebug's Net Panel.</em:description>
+    <em:creator>Hernán Rodríguez Colmeiro</em:creator>
+    <em:homepageURL>http://www.malditocrc.com.ar/peregrino/lab/firebug/advfilters</em:homepageURL>
   </Description>
 </RDF>

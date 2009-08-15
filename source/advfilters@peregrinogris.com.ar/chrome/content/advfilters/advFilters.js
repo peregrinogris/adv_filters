@@ -8,15 +8,15 @@ var modifiedRows = [];
 var currentFilter = /google/;
 
 // Module implementation
-Firebug.NetListenerModule = extend(Firebug.Module,
+Firebug.AdvFiltersModule = extend(Firebug.Module,
 {
     initialize: function(owner)
     {
         Firebug.Module.initialize.apply(this, arguments);
 
         // Register NetMonitor listener
-        this.netListener = new NetListener();
-        Firebug.NetMonitor.NetRequestTable.addListener(this.netListener);
+        this.advFilters = new AdvFilters();
+        Firebug.NetMonitor.NetRequestTable.addListener(this.advFilters);
     },
 
     shutdown: function()
@@ -24,7 +24,7 @@ Firebug.NetListenerModule = extend(Firebug.Module,
         Firebug.Module.shutdown.apply(this, arguments);
 
         // Unregister NetMonitor listener
-        Firebug.NetMonitor.NetRequestTable.removeListener(this.netListener);
+        Firebug.NetMonitor.NetRequestTable.removeListener(this.advFilters);
     },
 
     onToggleAdvFilters: function()
@@ -47,9 +47,9 @@ Firebug.NetListenerModule = extend(Firebug.Module,
 });
 
 // Net Panel Listener
-function NetListener(){};
+function AdvFilters(){};
 
-NetListener.prototype =
+AdvFilters.prototype =
 {
     onCreateRequestEntry: function(panel, row)
     {
@@ -93,7 +93,7 @@ function removeFilter(rows)
 
 
 // Registration
-Firebug.registerModule(Firebug.NetListenerModule);
+Firebug.registerModule(Firebug.AdvFiltersModule);
 
 }});
 
